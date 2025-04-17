@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication Form</title>
+  <link rel="stylesheet" href="logins.css">
+</head>
+<body>
+  <header style="background-color: rgb(43, 42, 42);text-align: center;align-content: center;">
+    <h1 style="color: aliceblue;">Welcome to Learnance</h1>
+    <p style="color: aliceblue;">Your gateway to mastering subjects with ease</p>
+</header>
+  <form id="auth-form">
+    <div class="container">
+      <h2 style="margin-left: 25px;">Login/Signup</h2>
+    <input type="hidden" id="form-type" value="login">
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    
+    <div id="confirm-password-field" style="display: none;">
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password" style="width: 70%;">
+    </div>
+    
+    <button type="submit" id="submit-button">Submit</button>
+  </div>
+  </form>
+  <br>
+  <p id="toggle-auth" style="margin-left: 500px;">
+    Don't have an account? <a href="#" onclick="toggleForm()">Sign up</a>
+  </p>
+
+  <script>
+    function toggleForm() {
+      const formType = document.getElementById('form-type');
+      const confirmPasswordField = document.getElementById('confirm-password-field');
+      const toggleAuthText = document.getElementById('toggle-auth');
+    
+      if (formType.value === 'login') {
+        formType.value = 'signup';
+        confirmPasswordField.style.display = 'block';
+        toggleAuthText.innerHTML = 'Already have an account? <a href="#" onclick="toggleForm()">Login</a>';
+      } else {
+        formType.value = 'login';
+        confirmPasswordField.style.display = 'none';
+        toggleAuthText.innerHTML = 'Don\'t have an account? <a href="#" onclick="toggleForm()">Sign up</a>';
+      }
+    }
+
+    document.getElementById('auth-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formType = document.getElementById('form-type').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+      
+      // Validate signup-specific fields
+      if (formType === 'signup' && password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+      }
+
+      // Prepare payload
+      const payload = { email, password };
+      if (formType === 'signup') payload.confirmPassword = confirmPassword;
+
+      try {
+        // Send POST request
+        const response = await fetch(`http://localhost:5000/${formType}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) {
+          // Handle HTTP errors
+          const errorData = await response.json();
+          alert(`Error: ${errorData.message}`);
+        } else {
+          // Handle success
+          const result = await response.json();
+          alert(result.message);
+
+          if (formType === 'login') {
+        window.location.href = './real.html'; // Adjust the path if necessary
+      }
+        }
+      } catch (error) {
+        // Handle network errors
+        alert(`An error occurred: ${error.message}`);
+      }
+    });
+  </script>
+</body>
+</html>

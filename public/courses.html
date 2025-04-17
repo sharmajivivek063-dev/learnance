@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnance - Subjects</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        header {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+        }
+
+        /* Card Section */
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            max-width: 1200px;
+        }
+
+        .card {
+            background-color: white;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            overflow: hidden;
+            text-align: center;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card h2 {
+            margin: 1rem 0;
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        .card p {
+            margin: 0 1.5rem 1rem;
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .card button {
+            background-color: #4caf50;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .card button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to Learnance</h1>
+        <p>Your gateway to mastering subjects with ease</p>
+    </header>
+
+    <!-- Cards Section -->
+    <section class="cards-container">
+        <!-- Math Card -->
+        <div class="card">
+            <img src="maths.jpg" alt="Math">
+            <h2>Math</h2>
+            <p>Explore the beauty of numbers, equations, and problem-solving techniques.</p>
+            <a href="mcourse.html"><button onclick="alert('Learn Math with Learnance!')">Learn More</button></a>
+        </div>
+
+        <!-- Physics Card -->
+        <div class="card">
+            <img src="physics.jpg" alt="Physics">
+            <h2>Physics</h2>
+            <p>Uncover the mysteries of the universe and understand how things work.</p>
+            <a href="pcourse.html"><button onclick="alert('Learn Physics with Learnance!')">Learn More</button></a>
+        </div>
+
+        <!-- Chemistry Card -->
+        <div class="card">
+            <img src="chemistry.avif" alt="Chemistry">
+            <h2>Chemistry</h2>
+            <p>Dive into the fascinating world of reactions, elements, and compounds.</p>
+            <a href="ccourse.html"><button onclick="alert('Learn Chemistry with Learnance!')">Learn More</button></a>
+        </div>
+    </section>
+</body>
+</html>

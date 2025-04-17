@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Listings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:  #fcecec;
+        }
+        header {
+            background-color: darkolivegreen;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .teacher-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem auto;
+            max-width: 1200px;
+        }
+        .teacher-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            width: 300px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .teacher-card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .teacher-card p {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+        .apply-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        .apply-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LEARNANCE PHYSICS FACULTY</h1>
+    </header>
+    <section class="teacher-list">
+        <!-- Example Teacher Card -->
+        <div class="teacher-card">
+            <h3>Apurva Mathur</h3>
+            <p><strong>Price per hour:</strong> Rs.800 </p>
+            <p><strong>Experience:</strong> 8 years</p>
+            <p><strong>University:</strong> KUK University</p>
+            <a href="https://wa.me/9350749728?text=hi sir i am from Learnance want to apply for  session"><button class="apply-button" >Apply</button></a>
+        </div>
+        <!-- Repeat similar cards for other teachers -->
+        <div class="teacher-card">
+            <h3>Keshav Singla</h3>
+            <p><strong>Price per hour:</strong> Rs.600</p>
+            <p><strong>Experience:</strong> 5 years</p>
+            <p><strong>University:</strong> MDU University</p>
+            <a href="https://wa.me/9350749728?text=hi sir i am from Learnance want to apply for  session"><button class="apply-button" >Apply</button></a>
+        </div>
+        <div class="teacher-card">
+            <h3>Pushpendu</h3>
+            <p><strong>Price per hour:</strong> Rs.1000</p>
+            <p><strong>Experience:</strong> 10 years</p>
+            <p><strong>University:</strong> Delhi University</p>
+            <a href="https://wa.me/9350749728?text=hi sir i am from Learnance want to apply for  session"><button class="apply-button" >Apply</button></a>
+        </div>
+        <div class="teacher-card">
+            <h3>Dr.Sachin Kapur</h3>
+            <p><strong>Price per hour:</strong> Rs.700</p>
+            <p><strong>Experience:</strong> 4 years</p>
+            <p><strong>University:</strong> NSUT University</p>
+            <a href="https://wa.me/9350749728?text=hi sir i am from Learnance want to apply for  session"><button class="apply-button" >Apply</button></a>
+        </div>
+        <div class="teacher-card">
+            <h3></h3>
+            <p><strong>Price per hour:</strong> Rs.600 </p>
+            <p><strong>Experience:</strong> 6 years</p>
+            <p><strong>University:</strong> IIT Knapur</p>
+            <a href="https://wa.me/9350749728?text=hi sir i am from Learnance want to apply for  session"><button class="apply-button" >Apply</button></a>
+        </div>
+        <div class="teacher-card">
+            <h3>Kartikey</h3>
+            <p><strong>Price per hour:</strong> Rs.2000</p>
+            <p><strong>Experience:</strong> 10 years</p>
+            <p><strong>University:</strong> Harvard University</p>
+            <a href="https://wa.me/9350749728?text=hi sir i am from Learnance want to apply for  session"><button class="apply-button" >Apply</button></a>
+        </div>
+    </section>
+    <script>
+        function generateZoomLink(teacherName) {
+            // Simulated Zoom link for now; replace with real API call later
+            const zoomLink = `https://zoom.us/j/6121939014?teacher=${encodeURIComponent(teacherName)}`;
+            alert(`Your Zoom meeting link for ${teacherName}: ${zoomLink}`);
+            window.open(zoomLink, "_blank");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+/* custom style sheet for the whole website*/
+.head{text-align: center !important;}
+ul{
+    list-style: none;
+}
+form input,textarea{
+    width: 100%;
+    padding: 5px;
+}
+form{
+    margin: 50px;
+}
+a{
+    color: black;
+    text-decoration: none;
+    
+}
+.about{
+    margin: 25px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #353333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.container p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.team-member {
+    width: 48%;
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.team-member:hover{
+    border: 3px solid rgb(47, 211, 240);
+}
+
+.team-member h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.row{
+    margin: 25px;
+    align-items: center;
+}
+
+#div-form{
+    margin-left: 100px;
+}
+
+.para{
+    text-align: center;
+    max-width: 400px;
+    margin: 10px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+#btn{
+    border:solid black 2px;
+}
+
+#btn:hover{
+    background-color: rgb(233, 245, 241);
+}
+
+.pic-desc{
+    text-align: center;
+    color: lightseagreen;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height:100%;
+    width:100%;
+    background-color: aquamarine;
+}
+#fake{
+    width: 100vw;
+    height: 10vh;
+    z-index: 10;
+}
+.contact{
+    margin-left: 30px;
+}
+.icon{
+    margin-left: 30px;
+    ;
+}
+#logo{
+    margin-right: 150px;
+}
+#header{
+    height: 10vh;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 15;
+    display: inline-flex;
+    align-items: center;
+
+} 
+#news{
+    text-align: center;
+    padding: 5px;
+    color: white;
+}
+
+#content1{
+    background-color: whitesmoke;
+}
+#inside1{
+    width: 100%;
+    height: 30%;
+    
+    align-content: center;
+    
+}
+#inside2{
+    width: 100%;
+    height: 70%;
+    
+    margin-top: 20px;
+    font-size: 30px;
+}
+.content{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color:white;
+    height: 100%;
+    width: 50%;
+    margin-top: 10px;
+}
+#quote{
+    background-color: white;
+    width: 100%;
+    height: 25%;
+    margin: 10px 10px;
+    align-content: center;
+    
+    border-radius: 10px;
+}
+.contents{
+    display: flex;
+    width: 100%;
+    height: 70%;
+}
+.text{
+    
+    padding-inline-start: 30px;
+    padding: 10px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.text:hover{
+    background-color: lightgray;
+}
+#footer{
+    height: 50vh;
+    background-color: black;
+    width: 100vw;
+}
+#news{
+    background-color:rgb(57, 57, 187);
+    height: 5vh;
+}
+#page1{
+    height: 85vh;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    
+}
+#page2{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    
+    
+    
+    align-items: center;
+    align-content: center;
+}
+#extreme{
+    margin-left: 200px;
+}
+.iconm{
+    
+    height:30%;
+    width: 100%;
+    border-radius: 10px;
+
+}
+.iconme{
+    
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    align-content: center;
+}
+.features{
+    width: 25vw;
+    
+    height: 60vh;
+    padding: 10px;
+    margin: 10px;
+}
+#page3{
+    height: 90vh;
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.81);
+    
+}
+#page4{
+    height: 90vh;
+    width: 100%;
+    background-color: rgb(98, 70, 29);
+    display: flex;
+}
+.founders{
+    width: 100%;
+    height: 15%;
+    
+}
+.nitin{
+    width: 100%;
+    height: 40%;
+    
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    
+}
+.vivek{
+    width: 100%;
+    height: 40%;
+    
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+.nimg{
+    height: 100%;
+    width: 30%;
+}
+.nabout{
+    height: 100%;
+    width: 70%;
+}
+
